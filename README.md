@@ -1,6 +1,6 @@
 # brainfuck interpreter
 ### Overview
-Simple brainfuck interpreter written in ~60 lines of C++ code, made to be minimal. List of commands can be seen [here](https://esolangs.org/wiki/Brainfuck) under `Language Overview` section.
+Simple brainfuck interpreter written in ~40 lines of C++ code (not counting includes, empty lines and lines only containing `}`), made to be minimal. List of commands can be seen [here](https://esolangs.org/wiki/Brainfuck) under `Language Overview` section.
 ### Compilling
 This interpreter does not use any dependencies nor needs to include any directories. Compilling is as simple as running
 ```bash

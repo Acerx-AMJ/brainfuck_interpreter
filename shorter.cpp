@@ -1,17 +1,11 @@
-// This file supports reading files and checks argument count. For a
-// shorter version, check 'shorter.cpp'.
+// This file is shorter, but it does not support reading a file and does
+// not check the argument count.
 
 #include <iostream>
-#include <fstream>
 #include <unordered_map>
 
 int main(int argc, char* argv[]) {
-   if (argc != 2) {
-      std::cerr << "Expected two args, got " << argc << " instead.\n";
-      return -1;
-   }
-   std::ifstream file (argv[1]);
-   std::string input = (file.is_open() ? std::string{std::istreambuf_iterator<char>{file}, {}} : argv[1]);
+   std::string input (argv[1]);
    std::unordered_map<int, unsigned char> memory;
    int pointer = 0;
 

@@ -29,11 +29,7 @@ inline void run_brainfuck(const std::string& input) {
          }
          int depth = 1;
          for (++i; i < input.size() && depth > 0; ++i) {
-            if (input.at(i) == '[') {
-               ++depth;
-            } else if (input.at(i) == ']') {
-               --depth;
-            }
+            depth += (input.at(i) == '[') - (input.at(i) == ']');
          }
       } else if (ch == ']') {
          if (memory[pointer] == 0) {
@@ -41,11 +37,7 @@ inline void run_brainfuck(const std::string& input) {
          }
          int depth = 1;
          for (--i; i >= 0 && depth > 0; --i) {
-            if (input.at(i) == '[') {
-               --depth;
-            } else if (input.at(i) == ']') {
-               ++depth;
-            }
+            depth += (input.at(i) == ']') - (input.at(i) == '[');
          }
       }
    }
